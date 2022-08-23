@@ -3,6 +3,7 @@
 
 :root {
     --primary: #fe2c55;
+    --text-color: #333;
 
     // Defaule layout
     --default-layout-header-height: 60px;
@@ -23,4 +24,16 @@ body {
     font-family: proxima-nova, sans-serif;
     font-size: 1.6rem;
     line-height: 1.5;
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+}
+
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
 }
