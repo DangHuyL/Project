@@ -6,11 +6,13 @@ import Tippy from '@tippyjs/react/headless';
 import {
     faCircleXmark,
     faMagnifyingGlass,
+    faPlus,
     faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 import { Wrapper as PopperWrapper } from '~/Combonents/Popper';
 import AccountItem from '~/Combonents/AccountItem';
+import Button from '~/Combonents/Button';
 const cx = classNames.bind(styles);
 function Header() {
     const [searchResult, setSearchResult] = useState([]);
@@ -60,7 +62,15 @@ function Header() {
                         </button>
                     </div>
                 </Tippy>
-                <div className={cx('active')}></div>
+                <div className={cx('active')}>
+                    <Button
+                        rectangle
+                        leftIcon={<FontAwesomeIcon icon={faPlus} />}
+                    >
+                        Upload
+                    </Button>
+                    <Button primary>Login</Button>
+                </div>
             </div>
         </div>
     );
