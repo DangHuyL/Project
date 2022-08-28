@@ -96,3 +96,16 @@ input:not(:placeholder-shown) ~ .search-btn {
         background: rgba(22, 24, 35, 0.06);
     }
 }
+
+.active {
+    display: inline-flex;
+    align-items: center;
+}
+
+.more-btn {
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 0px 10px;
+    margin-left: 16px;
+    background: transparent;
+}
