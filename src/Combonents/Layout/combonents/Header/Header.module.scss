@@ -17,6 +17,7 @@
     justify-content: space-between;
     height: 100%;
     width: var(--default-layout-width);
+    padding: 0px var(--default-layout-horizontal-spacer);
 }
 
 .search,
@@ -108,4 +109,5 @@ input:not(:placeholder-shown) ~ .search-btn {
     padding: 0px 10px;
     margin-left: 16px;
     background: transparent;
+    cursor: pointer;
 }

@@ -32,6 +32,19 @@ function Header() {
         {
             title: 'English',
             icon: <FontAwesomeIcon icon={faEarth} />,
+            children: {
+                title: 'Language',
+                data: [
+                    {
+                        code: 'En',
+                        title: 'English',
+                    },
+                    {
+                        code: 'Vie',
+                        title: 'VietNam',
+                    },
+                ],
+            },
         },
         {
             title: 'Feedback and help',
@@ -43,6 +56,11 @@ function Header() {
             icon: <FontAwesomeIcon icon={faKeyboard} />,
         },
     ];
+
+    const handleOnchange = (menuItem) => {
+        console.log(menuItem);
+    };
+
     return (
         <div className={cx('wraper')}>
             <div className={cx('inner')}>
@@ -92,7 +110,7 @@ function Header() {
                         Upload
                     </Button>
                     <Button primary>Login</Button>
-                    <Menu items={MENU_ITEM}>
+                    <Menu items={MENU_ITEM} onChange={handleOnchange}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>
