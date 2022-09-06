@@ -111,3 +111,23 @@ input:not(:placeholder-shown) ~ .search-btn {
     background: transparent;
     cursor: pointer;
 }
+
+// currentUser
+.action-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 2rem;
+    background: transparent;
+    margin-left: 1.6rem;
+    cursor: pointer;
+    color: rgba(22, 24, 35, 1);
+    line-height: 100%;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    margin-left: 2.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
