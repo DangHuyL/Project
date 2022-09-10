@@ -26,6 +26,8 @@ import { Wrapper as PopperWrapper } from '~/Combonents/Popper';
 import AccountItem from '~/Combonents/AccountItem';
 import Button from '~/Combonents/Button';
 import Menu from '~/Combonents/Popper/Menu';
+import { InboxIcon, MessageIcon } from '~/combonents/Icon';
+import Image from '~/Combonents/Image';
 
 const cx = classNames.bind(styles);
 function Header() {
@@ -145,12 +147,13 @@ function Header() {
                         <>
                             <Tippy content="Inbox">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faInbox} />
+                                    <MessageIcon />
                                 </button>
                             </Tippy>
                             <Tippy content="Messager">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faMessage} />
+                                    <InboxIcon />
+                                    <span className={cx('badge')}>12</span>
                                 </button>
                             </Tippy>
                         </>
@@ -165,10 +168,11 @@ function Header() {
                         onChange={handleOnchange}
                     >
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('avatar')}
                                 alt="Nguyen Van A"
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/8faf9aa1a1b6cfa8f70f8c1a5b733d4a~c5_100x100.jpeg?x-expires=1662602400&x-signature=BCqVYHhla%2FhiM3ccnVSRBSCW3f4%3D"
+                                fallback="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
                             />
                         ) : (
                             <>
