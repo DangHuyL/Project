@@ -135,22 +135,27 @@ function Header() {
                     </div>
                 </HeadlessTippy>
                 <div className={cx('active')}>
+                    <Button
+                        rectangle
+                        leftIcon={<FontAwesomeIcon icon={faPlus} />}
+                    >
+                        Upload
+                    </Button>
                     {currentUser ? (
                         <>
-                            <Tippy content="Messager">
+                            <Tippy content="Inbox">
                                 <button className={cx('action-btn')}>
                                     <FontAwesomeIcon icon={faInbox} />
+                                </button>
+                            </Tippy>
+                            <Tippy content="Messager">
+                                <button className={cx('action-btn')}>
+                                    <FontAwesomeIcon icon={faMessage} />
                                 </button>
                             </Tippy>
                         </>
                     ) : (
                         <>
-                            <Button
-                                rectangle
-                                leftIcon={<FontAwesomeIcon icon={faPlus} />}
-                            >
-                                Upload
-                            </Button>
                             <Button primary>Login</Button>
                         </>
                     )}
