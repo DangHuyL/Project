@@ -5,7 +5,7 @@ import Upload from '~/Pages/Upload';
 import Search from '~/Pages/Search';
 import routes from '~/config/routes';
 
-import { HeaderOnly } from '~/Combonents/Layout';
+import { HeaderOnly } from '~/layouts';
 
 const publishRouters = [
     { path: routes.home, component: Home },

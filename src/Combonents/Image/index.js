@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { forwardRef } from 'react';
 import images from '~/assets/images';
@@ -31,5 +32,12 @@ const Image = forwardRef(
         );
     },
 );
+
+Image.propTypes = {
+    src: PropTypes.string,
+    className: PropTypes.string,
+    alt: PropTypes.string,
+    fallback: PropTypes.string,
+};
 
 export default Image;

@@ -17,9 +17,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Button from '~/Combonents/Button';
 import Menu from '~/Combonents/Popper/Menu';
-import { InboxIcon, MessageIcon } from '~/combonents/Icon';
+import { InboxIcon, MessageIcon } from '~/Combonents/Icon';
 import Image from '~/Combonents/Image';
-import Search from '~/Combonents/Layout/combonents/Search';
+import Search from '~/layouts/combonents/Search';
 import { Link } from 'react-router-dom';
 import routes from '~/config/routes';
 

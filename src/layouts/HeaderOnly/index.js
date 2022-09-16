@@ -1,4 +1,4 @@
-import Header from '~/Combonents/Layout/combonents/Header';
+import Header from '~/layouts/combonents/Header';
 function HeaderOnly({ children }) {
     return (
         <div>

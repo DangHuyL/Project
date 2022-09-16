@@ -9,7 +9,7 @@ import {
     faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
 
-import * as searchServices from '~/apiServices/searchServices';
+import * as searchServices from '~/services/searchService';
 import { Wrapper as PopperWrapper } from '~/Combonents/Popper';
 import AccountItem from '~/Combonents/AccountItem';
 import { useDebounce } from '~/hook';
@@ -57,7 +57,7 @@ function Search() {
                 render={(attrs) => (
                     <div
                         className={cx('search-result')}
-                        tabindex="-1"
+                        tabIndex="-1"
                         {...attrs}
                     >
                         <PopperWrapper>
