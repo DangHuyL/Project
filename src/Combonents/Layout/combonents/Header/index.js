@@ -20,6 +20,8 @@ import Menu from '~/Combonents/Popper/Menu';
 import { InboxIcon, MessageIcon } from '~/combonents/Icon';
 import Image from '~/Combonents/Image';
 import Search from '~/Combonents/Layout/combonents/Search';
+import { Link } from 'react-router-dom';
+import routes from '~/config/routes';
 
 const cx = classNames.bind(styles);
 function Header() {
@@ -30,6 +32,94 @@ function Header() {
             children: {
                 title: 'Language',
                 data: [
+                    {
+                        code: 'En',
+                        title: 'English',
+                    },
+                    {
+                        code: 'Vie',
+                        title: 'VietNam',
+                    },
+                    {
+                        code: 'En',
+                        title: 'English',
+                    },
+                    {
+                        code: 'Vie',
+                        title: 'VietNam',
+                    },
+                    {
+                        code: 'En',
+                        title: 'English',
+                    },
+                    {
+                        code: 'Vie',
+                        title: 'VietNam',
+                    },
+                    {
+                        code: 'En',
+                        title: 'English',
+                    },
+                    {
+                        code: 'Vie',
+                        title: 'VietNam',
+                    },
+                    {
+                        code: 'En',
+                        title: 'English',
+                    },
+                    {
+                        code: 'Vie',
+                        title: 'VietNam',
+                    },
+                    {
+                        code: 'En',
+                        title: 'English',
+                    },
+                    {
+                        code: 'Vie',
+                        title: 'VietNam',
+                    },
+                    {
+                        code: 'En',
+                        title: 'English',
+                    },
+                    {
+                        code: 'Vie',
+                        title: 'VietNam',
+                    },
+                    {
+                        code: 'En',
+                        title: 'English',
+                    },
+                    {
+                        code: 'Vie',
+                        title: 'VietNam',
+                    },
+                    {
+                        code: 'En',
+                        title: 'English',
+                    },
+                    {
+                        code: 'Vie',
+                        title: 'VietNam',
+                    },
+                    {
+                        code: 'En',
+                        title: 'English',
+                    },
+                    {
+                        code: 'Vie',
+                        title: 'VietNam',
+                    },
+                    {
+                        code: 'En',
+                        title: 'English',
+                    },
+                    {
+                        code: 'Vie',
+                        title: 'VietNam',
+                    },
                     {
                         code: 'En',
                         title: 'English',
@@ -83,9 +173,9 @@ function Header() {
     return (
         <div className={cx('wraper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
+                <Link to={routes.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="tiktok" />
-                </div>
+                </Link>
                 <Search />
                 <div className={cx('active')}>
                     <Button

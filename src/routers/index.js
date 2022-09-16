@@ -3,15 +3,16 @@ import Following from '~/Pages/Following';
 import Profile from '~/Pages/Profile';
 import Upload from '~/Pages/Upload';
 import Search from '~/Pages/Search';
+import routes from '~/config/routes';
 
 import { HeaderOnly } from '~/Combonents/Layout';
 
 const publishRouters = [
-    { path: '/', component: Home },
-    { path: '/following', component: Following },
-    { path: '/@:nickname', component: Profile },
-    { path: '/upload', component: Upload, layout: HeaderOnly },
-    { path: '/search', component: Search, layout: null },
+    { path: routes.home, component: Home },
+    { path: routes.following, component: Following },
+    { path: routes.profile, component: Profile },
+    { path: routes.upload, component: Upload, layout: HeaderOnly },
+    { path: routes.search, component: Search, layout: null },
 ];
 
 const privateRouters = [];
