@@ -35,30 +35,28 @@ function Menu({
             );
         });
     };
+    const handleBackMenu = () => {
+        setHistory((prev) => prev.slice(0, prev.length - 1));
+    };
+    const handleRenderMenu = (attrs) => (
+        <div className={cx('Menu-list')} tabIndex="-1" {...attrs}>
+            <PopperWrapper className={cx('menu-popper')}>
+                {history.length > 1 && (
+                    <Header title="Language" onBack={handleBackMenu} />
+                )}
+                <div className={cx('menu-body')}>{renderItems()}</div>
+            </PopperWrapper>
+        </div>
+    );
+    const handleResetToFirstPage = () => setHistory((prev) => prev.slice(0, 1));
     return (
         <Tippy
             {...passProps}
             delay={[0, 700]}
             placement="bottom-end"
             interactive
-            render={(attrs) => (
-                <div className={cx('Menu-list')} tabIndex="-1" {...attrs}>
-                    <PopperWrapper className={cx('menu-popper')}>
-                        {history.length > 1 && (
-                            <Header
-                                title="Language"
-                                onBack={() => {
-                                    setHistory((prev) =>
-                                        prev.slice(0, prev.length - 1),
-                                    );
-                                }}
-                            />
-                        )}
-                        <div className={cx('menu-body')}>{renderItems()}</div>
-                    </PopperWrapper>
-                </div>
-            )}
-            onHide={() => setHistory((prev) => prev.slice(0, 1))}
+            render={handleRenderMenu}
+            onHide={handleResetToFirstPage}
             hideOnClick={hideOnclick}
         >
             {children}

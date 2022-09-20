@@ -53,7 +53,7 @@ function Header() {
             icon: <FontAwesomeIcon icon={faKeyboard} />,
         },
     ];
-    const currentUser = true;
+    const currentUser = false;
     const userMenu = [
         {
             title: 'View profile',
@@ -112,7 +112,9 @@ function Header() {
                         </>
                     ) : (
                         <>
-                            <Button primary>Login</Button>
+                            <Button to primary>
+                                Login
+                            </Button>
                         </>
                     )}
 
