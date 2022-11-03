@@ -112,9 +112,7 @@ function Header() {
                         </>
                     ) : (
                         <>
-                            <Button to primary>
-                                Login
-                            </Button>
+                            <Button primary>Login</Button>
                         </>
                     )}
 
@@ -130,13 +128,9 @@ function Header() {
                                 fallback="https://fullstack.edu.vn/static/media/f8-icon.18cd71cfcfa33566a22b.png"
                             />
                         ) : (
-                            <>
-                                <button className={cx('more-btn')}>
-                                    <FontAwesomeIcon
-                                        icon={faEllipsisVertical}
-                                    />
-                                </button>
-                            </>
+                            <button className={cx('more-btn')}>
+                                <FontAwesomeIcon icon={faEllipsisVertical} />
+                            </button>
                         )}
                     </Menu>
                 </div>
